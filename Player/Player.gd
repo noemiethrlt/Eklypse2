@@ -23,6 +23,9 @@ onready var ap_Player = $ap_Player
 onready var at_Player = $at_Player
 onready var state_Player = at_Player.get("parameters/playback")
 onready var hb_punch = $s_Player/hb_punch
+onready var l2d_Player2 = $l2d_Player2
+onready var l2d_Player = $l2d_Player
+
 
 onready var s_Player = $s_Player
 
@@ -42,6 +45,12 @@ func _physics_process(delta):
 			state_move(delta)
 		PUNCH:
 			state_punch(delta)
+	if GlobalEklypse.eklypse == false :
+		l2d_Player2.set_enabled(false)
+		l2d_Player.set_enabled(false)
+	else :
+		l2d_Player2.set_enabled(true)
+		l2d_Player.set_enabled(true)
 	
 	
 	

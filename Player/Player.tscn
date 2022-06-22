@@ -155,12 +155,32 @@ graph_offset = Vector2( 668.673, 0 )
 collision_layer = 2
 script = ExtResource( 2 )
 
+[node name="l2d_Player" type="Light2D" parent="."]
+position = Vector2( -0.333694, -1.00114 )
+scale = Vector2( 0.498132, 0.498132 )
+texture = ExtResource( 5 )
+texture_scale = 0.6
+energy = 0.4
+shadow_enabled = true
+shadow_gradient_length = 3.0
+shadow_filter = 2
+shadow_filter_smooth = 10.0
+
+[node name="l2d_Player2" type="Light2D" parent="."]
+position = Vector2( -0.165611, -0.168133 )
+scale = Vector2( 0.378842, 0.376245 )
+texture = ExtResource( 5 )
+energy = 0.4
+shadow_enabled = true
+shadow_gradient_length = 3.0
+shadow_filter = 2
+shadow_filter_smooth = 10.0
+
 [node name="s_Player" type="Sprite" parent="."]
 position = Vector2( 0, -16 )
 texture = ExtResource( 1 )
 hframes = 6
 vframes = 5
-frame = 1
 region_rect = Rect2( 80, 80, 8, 80 )
 
 [node name="hb_punch" parent="s_Player" instance=ExtResource( 3 )]
@@ -194,21 +214,5 @@ parameters/playback = SubResource( 16 )
 
 [node name="pivot" type="Position2D" parent="."]
 position = Vector2( 0, -4.375 )
-
-[node name="Light2D" type="Light2D" parent="."]
-texture = ExtResource( 5 )
-texture_scale = 0.6
-energy = 0.3
-shadow_enabled = true
-shadow_gradient_length = 3.0
-shadow_filter = 2
-shadow_filter_smooth = 10.0
-
-[node name="Light2D2" type="Light2D" parent="."]
-texture = ExtResource( 5 )
-energy = 0.3
-shadow_gradient_length = 3.0
-shadow_filter = 2
-shadow_filter_smooth = 10.0
 
 [editable path="s_Player/hb_punch"]

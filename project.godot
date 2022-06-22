@@ -14,6 +14,10 @@ config/name="Eklypse2"
 run/main_scene="res://World.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+GlobalEklypse="*res://global_eklypse.gd"
+
 [display]
 
 window/size/width=320
