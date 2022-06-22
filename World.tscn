@@ -8,7 +8,7 @@
 [ext_resource path="res://World/Rock.tscn" type="PackedScene" id=6]
 [ext_resource path="res://World/Tree.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Enemies/Slime.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Cycle.gd" type="Script" id=9]
+[ext_resource path="res://World.gd" type="Script" id=10]
 
 [sub_resource type="TileSet" id=1]
 0/name = "plains.png 0"
@@ -278,6 +278,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 13.5997, 0.152939, 13.7612 )
 0/z_index = 0
 
 [node name="World" type="Node2D"]
+script = ExtResource( 10 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -306,7 +307,7 @@ tile_data = PoolIntArray( -196616, 0, 1, -196615, 0, 2, -196614, 0, 2, -196613, 
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 92, 104 )
+position = Vector2( 96, 104 )
 
 [node name="Trees" type="YSort" parent="YSort"]
 
@@ -391,6 +392,4 @@ position = Vector2( 288, 160 )
 [node name="Slime3" parent="YSort/Slimes" instance=ExtResource( 8 )]
 position = Vector2( 96, 144 )
 
-[node name="AmbiantLght" type="CanvasModulate" parent="."]
-color = Color( 0.4, 0.12549, 0.12549, 1 )
-script = ExtResource( 9 )
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
