@@ -51,6 +51,11 @@ func _physics_process(delta):
 	else :
 		l2d_Player2.set_enabled(true)
 		l2d_Player.set_enabled(true)
+		
+		
+	# ANTOINE
+	if Input.is_action_just_pressed("dash"):
+		dash()
 	
 	
 	
@@ -117,3 +122,21 @@ func state_punch(delta):
 func punch_animation_finished():
 	velocity = Vector2.ZERO ## éviter de "glisser" après être arrivé
 	state = MOVE 
+	
+	#ANTOINE
+	$Stamina.value-=10
+
+
+
+
+# ANTOINE ######################################################################
+
+#Fonction pour le dash 
+func dash():
+	MAX_SPEED = 400
+	$Timer.start()
+	$Stamina.value-=10
+
+func _on_Timer_timeout():
+	MAX_SPEED = 80 
+
