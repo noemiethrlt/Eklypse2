@@ -11,12 +11,13 @@ config_version=4
 [application]
 
 config/name="Eklypse2"
-run/main_scene="res://World.tscn"
+run/main_scene="res://Menu/menu.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
 GlobalEklypse="*res://global_eklypse.gd"
+PlayerStats="*res://Player/PlayerStats.tscn"
 
 [display]
 

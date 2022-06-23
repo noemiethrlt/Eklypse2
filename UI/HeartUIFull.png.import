@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/HeartUIEmpty.png-916325ec8253f6cf5d95e73b7298b621.stex"
+path="res://.import/HeartUIFull.png-e9d9ebbeee52aaa00895457d920c0f53.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://World/NOTUSED/UI/HeartUIEmpty.png"
-dest_files=[ "res://.import/HeartUIEmpty.png-916325ec8253f6cf5d95e73b7298b621.stex" ]
+source_file="res://UI/HeartUIFull.png"
+dest_files=[ "res://.import/HeartUIFull.png-e9d9ebbeee52aaa00895457d920c0f53.stex" ]
 
 [params]
 

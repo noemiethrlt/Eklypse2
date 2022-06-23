@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=2]
+[gd_scene load_steps=58 format=2]
 
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://World/Rock.tscn" type="PackedScene" id=6]
 [ext_resource path="res://World/Tree.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Enemies/Slime.tscn" type="PackedScene" id=8]
+[ext_resource path="res://UI/HealthUI.tscn" type="PackedScene" id=9]
 [ext_resource path="res://World.gd" type="Script" id=10]
 
 [sub_resource type="TileSet" id=1]
@@ -36,7 +37,7 @@
 0/z_index = 0
 
 [sub_resource type="OccluderPolygon2D" id=2]
-polygon = PoolVector2Array( 3.55225, 15.4663, 3.45879, 11.8212, 7.19735, 7.33495, 12.3379, 10.3258, 12.8052, 15.8402 )
+polygon = PoolVector2Array( 3.57095, 16, 3.45879, 11.8212, 7.19735, 7.33495, 12.3379, 10.3258, 12.8052, 15.8402 )
 
 [sub_resource type="OccluderPolygon2D" id=3]
 polygon = PoolVector2Array( 3.45879, 0, 3.73918, 0, 3.36533, 16, 13.6464, 16, 13.366, 0 )
@@ -44,11 +45,68 @@ polygon = PoolVector2Array( 3.45879, 0, 3.73918, 0, 3.36533, 16, 13.6464, 16, 13
 [sub_resource type="OccluderPolygon2D" id=4]
 polygon = PoolVector2Array( 3.1784, 0.0522385, 3.1784, 10.2398, 7.75813, 13.698, 12.9921, 12.5764, 14.1137, 9.58556, 14.1137, 0 )
 
+[sub_resource type="OccluderPolygon2D" id=29]
+polygon = PoolVector2Array( 7.60859, 1.69086, 3.57095, 6.7379, 5.58977, 12.57, 11.8705, 13.1308, 12.7678, 8.75671, 11.8705, 4.71909 )
+
+[sub_resource type="OccluderPolygon2D" id=30]
+polygon = PoolVector2Array( 15.3858, 3.33969, 8.65639, 4.90988, 3.83366, 11.8636, 3.60934, 16, 16, 16, 16, 2.77891 )
+
+[sub_resource type="OccluderPolygon2D" id=31]
+polygon = PoolVector2Array( 3.7215, 0, 3.27288, 16, 16, 16, 16, 0 )
+
+[sub_resource type="OccluderPolygon2D" id=32]
+polygon = PoolVector2Array( 3.49719, 0, 16, 0, 16, 13.9897, 5.06738, 12.9803 )
+
+[sub_resource type="OccluderPolygon2D" id=33]
+polygon = PoolVector2Array( 16, 0.457138, 7.75914, 2.3638, 2.59993, 7.85947, 7.0862, 13.3551, 16, 14.3645 )
+
+[sub_resource type="OccluderPolygon2D" id=34]
+polygon = PoolVector2Array( 0, 2.66675, 5.33009, 4.46126, 9.25557, 3.45184, 12.2838, 4.79772, 15.5363, 4.01263, 16, 16, 0, 16 )
+
+[sub_resource type="OccluderPolygon2D" id=35]
+polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="OccluderPolygon2D" id=36]
+polygon = PoolVector2Array( 0, 0, 16, 0, 16, 14.1018, 0.0587273, 14.1018 )
+
+[sub_resource type="OccluderPolygon2D" id=37]
+polygon = PoolVector2Array( 0, 1.46654, 16, 1.46654, 16, 14.3645, 0, 14.9253 )
+
+[sub_resource type="OccluderPolygon2D" id=38]
+polygon = PoolVector2Array( 0, 3.45184, 8.84534, 3.33969, 14.1167, 16, 0, 16 )
+
+[sub_resource type="OccluderPolygon2D" id=39]
+polygon = PoolVector2Array( 0, 0, 13.6681, 0, 14.1167, 16, 0, 16 )
+
+[sub_resource type="OccluderPolygon2D" id=40]
+polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="OccluderPolygon2D" id=41]
+polygon = PoolVector2Array( 0, 1.59938, 0, 14.3852, 10.752, 13.488, 14.0045, 10.2354, 10.5277, 2.048 )
+
+[sub_resource type="OccluderPolygon2D" id=42]
+polygon = PoolVector2Array( 15.6131, 11.9757, 13.0335, 16, 0, 16, 0, 0, 16, 0 )
+
+[sub_resource type="OccluderPolygon2D" id=43]
+polygon = PoolVector2Array( 0, 0, 0, 16, 16, 16, 16, 3.22667, 11.4633, 0 )
+
+[sub_resource type="OccluderPolygon2D" id=44]
+polygon = PoolVector2Array( 0, 4.02843, 0, 16, 13.2578, 16, 16, 12.328, 16, 0, 5.74335, 0 )
+
+[sub_resource type="OccluderPolygon2D" id=45]
+polygon = PoolVector2Array( 0.846848, 11.1907, 4.0994, 16, 16, 16, 16, 0, 0, 0, 0, 11.1907 )
+
+[sub_resource type="OccluderPolygon2D" id=46]
+polygon = PoolVector2Array( 0, 4.12392, 0, 16, 16, 16, 16, 0, 6.00606, 0 )
+
+[sub_resource type="OccluderPolygon2D" id=47]
+polygon = PoolVector2Array( 0, 0, 0, 11.9915, 4.88449, 16, 16, 16, 16, 5.26215, 12.8476, 0 )
+
 [sub_resource type="ConcavePolygonShape2D" id=5]
 segments = PoolVector2Array( 16, 16, 16, 0, 16, 0, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16 )
 
 [sub_resource type="ConvexPolygonShape2D" id=6]
-points = PoolVector2Array( 16, 13.4192, 15.6684, 13.9037, 9.53121, 13.9037, 4.68605, 11.9656, 4.84755, 0.345306, 15.9914, 0 )
+points = PoolVector2Array( 16, 13.9997, 10.4509, 14.3362, 6.18895, 13.2146, 4.05797, 10.2985, 4.84755, 0.345306, 15.9914, 0 )
 
 [sub_resource type="ConvexPolygonShape2D" id=7]
 points = PoolVector2Array( 0.152939, 5.1824, 0, 0.345306, 16, 0, 15.819, 13.2577, 0, 13.4192 )
@@ -72,7 +130,7 @@ points = PoolVector2Array( 5.98904, 0, 5.98904, 0, 11.1572, 0, 13.5798, 7.12047,
 points = PoolVector2Array( 16, 16, 2.58648, 16, 4.68605, 9.57591, 8.07766, 2.63117, 8.07766, 2.63117, 15.8299, 1.33913 )
 
 [sub_resource type="ConvexPolygonShape2D" id=14]
-points = PoolVector2Array( 16, 0, 16, 16, 2.90948, 16, 2.90948, 0, 3.394, 0.520653 )
+points = PoolVector2Array( 16, 0, 16, 16, 2.90948, 16, 2.90948, 0, 3.7215, 0 )
 
 [sub_resource type="ConvexPolygonShape2D" id=15]
 points = PoolVector2Array( 3.394, 0, 16, 0, 16, 13.9147, 5.97809, 14.2377, 3.394, 10.2, 3.55551, 0.025177 )
@@ -108,7 +166,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 points = PoolVector2Array( 0, 0, 13.2239, 0, 13.2239, 16, 0, 16 )
 
 [sub_resource type="ConvexPolygonShape2D" id=26]
-points = PoolVector2Array( 0, 0, 14.193, 0, 14.193, 13.7612, 0, 13.2767 )
+points = PoolVector2Array( 0, 0, 14.193, 0, 14.193, 13.7612, 0, 14.5929 )
 
 [sub_resource type="ConvexPolygonShape2D" id=27]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 13.5997, 0.152939, 13.7612 )
@@ -125,7 +183,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 13.5997, 0.152939, 13.7612 )
 0/autotile/icon_coordinate = Vector2( 0, 0 )
 0/autotile/tile_size = Vector2( 16, 16 )
 0/autotile/spacing = 0
-0/autotile/occluder_map = [ Vector2( 0, 0 ), SubResource( 2 ), Vector2( 0, 1 ), SubResource( 3 ), Vector2( 0, 2 ), SubResource( 4 ) ]
+0/autotile/occluder_map = [ Vector2( 0, 0 ), SubResource( 2 ), Vector2( 0, 1 ), SubResource( 3 ), Vector2( 0, 2 ), SubResource( 4 ), Vector2( 0, 3 ), SubResource( 29 ), Vector2( 1, 0 ), SubResource( 30 ), Vector2( 1, 1 ), SubResource( 31 ), Vector2( 1, 2 ), SubResource( 32 ), Vector2( 1, 3 ), SubResource( 33 ), Vector2( 2, 0 ), SubResource( 34 ), Vector2( 2, 1 ), SubResource( 35 ), Vector2( 2, 2 ), SubResource( 36 ), Vector2( 2, 3 ), SubResource( 37 ), Vector2( 3, 0 ), SubResource( 38 ), Vector2( 3, 1 ), SubResource( 39 ), Vector2( 3, 2 ), SubResource( 40 ), Vector2( 3, 3 ), SubResource( 41 ), Vector2( 4, 0 ), SubResource( 42 ), Vector2( 4, 1 ), SubResource( 43 ), Vector2( 4, 2 ), SubResource( 44 ), Vector2( 5, 0 ), SubResource( 45 ), Vector2( 5, 1 ), SubResource( 46 ), Vector2( 5, 2 ), SubResource( 47 ) ]
 0/autotile/navpoly_map = [  ]
 0/autotile/priority_map = [  ]
 0/autotile/z_index_map = [  ]
@@ -393,3 +451,5 @@ position = Vector2( 288, 160 )
 position = Vector2( 120, 136 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+
+[node name="HealthUI" parent="." instance=ExtResource( 9 )]

@@ -11,7 +11,7 @@ var lenght_day = 0
 var hours = 0
 var nb_days = 0
 
-###################################
+
 enum {JOUR, NUIT}
 export var cycle  = JOUR
 
